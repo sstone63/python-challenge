@@ -28,4 +28,7 @@ print("Average Reveneue Change: " + "$" + str(Average_Revenue_Change))
 print("Greatest Increase in Revenue: " + Date_Max + " " + "$" + str(Greatest_Increase_R))
 print("Greatest Decrease in Revenue: " + Date_Min + " " + "$" + str(Greatest_Decrease_R))
 
-budget_data.to_csv("new_budget_data.csv", index = False, header = True)
+budget_to_csv = pd.DataFrame({"Total Months": [Total_Months], "Total Revenue": [Total_Revenue], "Average Revenue Change": [Average_Revenue_Change],
+                              "Greatest Increase in Revenue": [Greatest_Increase_R], "Greatest Decrease in Revenue": [Greatest_Decrease_R]})
+
+budget_to_csv.to_csv("new_budget_data.csv", index = False, header = True)
